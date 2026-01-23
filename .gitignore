@@ -1,0 +1,11 @@
+# Local env files
+.env
+.env.*
+# Secrets, keys, and local files
+*.pem
+*.key
+# OS files
+.DS_Store
+Thumbs.db
+# Zip artifacts
+*.zip
