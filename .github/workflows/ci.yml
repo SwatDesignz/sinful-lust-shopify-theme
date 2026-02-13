@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run Lighthouse CI on Shopify theme
-        uses:  Shopify/lighthouse-ci-action@v1.2.0
+        uses:  Shopify/lighthouse-ci-action@v1.2.2
         with:
           store: ${{ secrets.SHOP_STORE_OS2 }}
           password: ${{ secrets.SHOP_PASSWORD_OS2 }}
