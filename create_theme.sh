@@ -11,7 +11,7 @@ set -euo pipefail
 DESKTOP="${HOME}/Desktop"
 THEME="${DESKTOP}/sinful-lust-shopify-theme"
 ASSETS_SRC="${DESKTOP}/Downloads"
-GITHUB_USER="trappyjay93"
+GITHUB_USER="SwatDesignz"
 GITHUB_REPO="sinful-lust-shopify-theme"
 
 # Helper for messages
