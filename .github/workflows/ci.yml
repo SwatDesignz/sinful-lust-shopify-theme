@@ -1,26 +1,28 @@
-name: CI
-on: [push]
-jobs:
-  lhci:
-    name: Run Lighthouse CI on Shopify theme
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - name: Run Lighthouse CI on Shopify theme
-        uses:  Shopify/lighthouse-ci-action@v1.2.0
-        with:
-          store: ${{ secrets.SHOP_STORE_OS2 }}
-          password: ${{ secrets.SHOP_PASSWORD_OS2 }}
-          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
-          collection_handle: all
-          lhci_github_app_token: ${{ secrets.LHCI_GITHUB_TOKEN }}
-          pull_theme: ${{ secrets.SHOP_PULL_THEME }}
-  theme-check:
-    name: Run Theme Check on Shopify theme
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - name: Run Theme Check on Shopify theme
-        uses: Shopify/theme-check-action@v1.3.0
-        with:
-          token: ${{ github.token }}
+            - name: Run Lighthouse CI on Shopify theme
+  # You may pin to the exact commit or the version.
+  # uses: Shopify/lighthouse-ci-action@c47b68136fa4a8731b0386c33edaee1fa42a5142
+  uses: Shopify/lighthouse-ci-action@v1.2.0
+  with:
+    # Custom app access token
+    access_token: # optional
+    # <domain>.myshopify.com URL
+    store: 
+    # Password-protected shop password
+    password: # optional
+    # Product handle for product page test (default: first product).
+    product_handle: # optional
+    # Collection handle for collection page test (default: first collection).
+    collection_handle: # optional
+    # The root folder for the theme files that will be uploaded (default: ".")
+    theme_root: # optional, default is .
+    # The ID or name of a theme from which the settings and JSON templates should be pulled. If provided, those settings will be pulled into the development theme.
+    pull_theme: # optional
+    # Lighthouse CI GitHub app token
+    lhci_github_app_token: # optional
+    # GitHub personal access token
+    lhci_github_token: # optional
+    # Minimum performance score
+    lhci_min_score_performance: # optional, default is 0.6
+    # Minimum accessibility score
+    lhci_min_score_accessibility: # optional, default is 0.9
+          
