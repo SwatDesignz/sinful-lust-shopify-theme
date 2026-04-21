@@ -8,7 +8,7 @@
 # Prereqs: git-filter-repo (pip install git-filter-repo) OR see BFG alternative.
 set -euo pipefail
 
-REPO_URL="https://github.com/Trappyjay93/sinful-lust-shopify-theme.git"
+REPO_URL="https://github.com/SwatDesignz/sinful-lust-shopify-theme.git"
 TMP_DIR="$(mktemp -d)"
 cd "$TMP_DIR"
 
